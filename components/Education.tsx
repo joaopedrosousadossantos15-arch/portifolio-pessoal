@@ -14,7 +14,7 @@ export function Education() {
       <div className="education-layout">
         <div className="education-intro">
           <GraduationCap size={25} aria-hidden="true" />
-          <p>O aprendizado acontece em muitos lugares. Aqui está um ponto de partida para contar sua história.</p>
+          <p>A formação acadêmica complementa projetos práticos em desenvolvimento web, dados e inteligência artificial.</p>
         </div>
         <ol className="timeline">
           {education.map((item, index) => (

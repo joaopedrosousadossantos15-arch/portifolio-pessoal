@@ -8,7 +8,7 @@ export function Projects() {
     <section className="section-wrap section-block mx-auto" id="projetos">
       <Reveal>
         <SectionHeading eyebrow="Seleção de trabalhos" title="Projetos com propósito.">
-          <p>Ideias que saíram do papel — e continuam evoluindo.</p>
+          <p>Soluções organizadas pela relevância para desenvolvimento Java e back-end.</p>
         </SectionHeading>
       </Reveal>
       <div className="project-grid">

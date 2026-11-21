@@ -59,7 +59,7 @@ export function Navbar() {
     <header className="site-header">
       <nav className="nav-shell" aria-label="Navegação principal">
         <a className="brand" href="#inicio" onClick={closeMenu}>
-          <span className="brand-mark">S.</span>
+          <span className="brand-mark">JP.</span>
           <span>Portfólio pessoal</span>
         </a>
         <button

@@ -8,13 +8,13 @@ export function Skills() {
     <section className="section-wrap section-block skills-section mx-auto" id="habilidades">
       <Reveal>
         <SectionHeading eyebrow="Caixa de ferramentas" title="Conhecimento em prática.">
-          <p>Exemplos editáveis — mantenha apenas as competências que refletem sua experiência.</p>
+          <p>Tecnologias, ferramentas e fundamentos aplicados em projetos acadêmicos e pessoais.</p>
         </SectionHeading>
       </Reveal>
       <div className="skills-layout">
         <div className="skills-aside">
           <span className="skills-icon"><Layers3 size={24} /></span>
-          <p>Mais do que ferramentas, gosto de entender como cada escolha melhora a experiência de quem usa.</p>
+          <p>Meu foco atual é evoluir como desenvolvedor Java completo, combinando back-end robusto com boas práticas de engenharia.</p>
           <a href="#contato">Vamos construir algo? <ArrowUpRight size={15} /></a>
         </div>
         <div className="skills-grid">

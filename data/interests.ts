@@ -1,20 +1,20 @@
 export const interests = [
   {
-    title: "Curiosidade em movimento",
+    title: "Inteligência Artificial",
     description:
-      "Compartilhe um hobby, um tema que você gosta de explorar ou algo que inspira suas ideias.",
+      "Estudo redes neurais e Diffusion Models e participei de projetos acadêmicos de visão computacional.",
     symbol: "01",
   },
   {
-    title: "Aprender fazendo",
+    title: "Desenvolvimento Java",
     description:
-      "Conte o que costuma estudar por iniciativa própria e como isso se conecta à sua trajetória.",
+      "Meu principal objetivo é dominar o desenvolvimento back-end com Java e Spring Boot.",
     symbol: "02",
   },
   {
-    title: "Pausa com propósito",
+    title: "Liga Acadêmica",
     description:
-      "Música, natureza, leitura ou qualquer atividade que ajude a recarregar e olhar diferente.",
+      "Sou membro da LIA — Liga Acadêmica de Inteligência Artificial da CEUMA.",
     symbol: "03",
   },
 ];

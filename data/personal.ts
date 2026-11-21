@@ -1,13 +1,14 @@
 export const personal = {
-  name: "Seu nome completo",
-  shortName: "Seu nome",
-  role: "Desenvolvedor(a) de software",
-  location: "",
+  name: "João Pedro Sousa dos Santos",
+  shortName: "João Pedro",
+  role: "Estudante de Engenharia de Computação & desenvolvedor back-end",
+  location: "São Luís – MA",
   email: "",
-  availability: "",
+  availability: "Disponível para oportunidades",
   introduction:
-    "Adicione uma breve apresentação pessoal e profissional, destacando sua forma de trabalhar e o impacto que busca criar.",
-  statement: "Adicione uma frase que represente sua identidade profissional.",
+    "Estudante de Engenharia de Computação na CEUMA, no 4º período. Desenvolvo sistemas web e APIs com foco em Java e Spring Boot. Busco unir back-end, bancos de dados e inteligência artificial em soluções práticas.",
+  statement:
+    "Sou desenvolvedor em formação, com foco em Java e back-end com Spring Boot. Tenho experiência acadêmica em APIs, bancos de dados, segurança, arquitetura MVC e projetos com IA. Busco criar soluções bem estruturadas, úteis e com boas práticas de engenharia de software.",
   profiles: {
     github: "",
     linkedin: "",

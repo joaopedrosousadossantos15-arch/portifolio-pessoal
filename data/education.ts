@@ -8,19 +8,11 @@ export type EducationEntry = {
 
 export const education: EducationEntry[] = [
   {
-    title: "Nome do curso ou formação",
-    institution: "Nome da instituição",
-    period: "AAAA — em andamento",
+    title: "Engenharia de Computação",
+    institution: "Universidade CEUMA — Campus Renascença",
+    period: "Em andamento · 4º período",
     status: "Em andamento",
     description:
-      "Adicione uma breve descrição sobre sua formação, áreas de estudo ou atividades relevantes.",
-  },
-  {
-    title: "Curso ou certificação",
-    institution: "Instituição responsável",
-    period: "AAAA",
-    status: "Concluído",
-    description:
-      "Informe a carga horária e o que você desenvolveu ou aprendeu, se for relevante.",
+      "Graduação em andamento em São Luís – MA, com estudos em programação, estruturas de dados, bancos de dados, redes neurais e engenharia de software.",
   },
 ];
