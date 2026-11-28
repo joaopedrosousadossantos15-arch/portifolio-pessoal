@@ -1,46 +1,70 @@
-import { Github, Instagram, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Github, Globe, Instagram, Linkedin, Mail, MapPin, Sparkle } from "lucide-react";
 import { personal } from "@/data/personal";
 import { Reveal } from "@/components/Reveal";
-import { SectionHeading } from "@/components/SectionHeading";
 
 export function Contact() {
-  const socialLinks = [
-    { label: "LinkedIn", href: personal.profiles.linkedin, Icon: Linkedin },
+  const contactItems = [
+    { label: personal.email, href: personal.email ? `mailto:${personal.email}` : "", Icon: Mail },
+    { label: personal.website, href: personal.website ? `https://${personal.website}` : "", Icon: Globe },
     { label: "GitHub", href: personal.profiles.github, Icon: Github },
+    { label: "LinkedIn", href: personal.profiles.linkedin, Icon: Linkedin },
     { label: "Instagram", href: personal.profiles.instagram, Icon: Instagram },
-  ].filter((link) => link.href);
+  ].filter((item) => item.href);
 
   return (
-    <section className="section-wrap section-block contact-section mx-auto" id="contato">
-      <Reveal>
-        <SectionHeading eyebrow="Seu próximo passo" title="Boas conversas começam aqui.">
-          <p>Tem uma ideia, uma oportunidade ou só quer trocar experiências? Minha caixa de entrada está aberta.</p>
-        </SectionHeading>
-      </Reveal>
-      <div className="contact-layout">
-        <Reveal className="contact-details">
-          <p className="contact-prompt">Vamos tirar uma boa ideia do papel?</p>
-          {personal.email ? (
-            <a className="contact-email" href={`mailto:${personal.email}`}>
-              <Mail size={18} />
-              {personal.email}
-            </a>
-          ) : (
-            <p className="contact-email-placeholder">
-              <Mail size={18} />
-              Adicione seu e-mail em data/personal.ts
-            </p>
-          )}
-          <p className="contact-note">Normalmente respondo em até dois dias úteis.</p>
-          {socialLinks.length > 0 && (
-            <div className="contact-socials">
-              {socialLinks.map(({ label, href, Icon }) => (
-                <a key={label} href={href} target="_blank" rel="noreferrer" aria-label={label}>
-                  <Icon size={18} />
+    <section className="contact-section" id="contato">
+      <div className="contact-grid section-wrap mx-auto">
+        <Reveal className="contact-intro">
+          <h2>
+            Vamos trabalhar{" "}
+            <span>
+              juntos
+              <Sparkle className="contact-star" size={18} aria-hidden="true" />
+            </span>
+          </h2>
+          <p>Estou aberto a estágios, projetos e colaborações. Vamos tirar uma boa ideia do papel.</p>
+          <a className="contact-cta" href={contactItems[0]?.href ?? "#inicio"}>
+            <span className="contact-cta-icon">
+              <ArrowRight size={16} aria-hidden="true" />
+            </span>
+            {personal.availability}
+          </a>
+        </Reveal>
+
+        <Reveal delay={0.08}>
+          <ul className="contact-list">
+            {contactItems.map(({ label, href, Icon }) => (
+              <li key={href}>
+                <span className="contact-icon">
+                  <Icon size={17} aria-hidden="true" />
+                </span>
+                <a href={href} target={href.startsWith("mailto:") ? undefined : "_blank"} rel="noreferrer">
+                  {label}
                 </a>
-              ))}
+              </li>
+            ))}
+            {personal.location && (
+              <li>
+                <span className="contact-icon">
+                  <MapPin size={17} aria-hidden="true" />
+                </span>
+                <span>{personal.location}</span>
+              </li>
+            )}
+          </ul>
+        </Reveal>
+
+        <Reveal className="laptop" delay={0.16}>
+          <div className="laptop-screen" aria-hidden="true">
+            <div className="laptop-page">
+              <span className="laptop-kicker">Portfólio</span>
+              <strong>Sistemas bem estruturados</strong>
+              <span className="laptop-line" />
+              <span className="laptop-line short" />
+              <span className="laptop-block" />
             </div>
-          )}
+          </div>
+          <div className="laptop-base" aria-hidden="true" />
         </Reveal>
       </div>
     </section>

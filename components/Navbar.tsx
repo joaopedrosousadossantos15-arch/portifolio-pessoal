@@ -1,14 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
+import { Menu, Moon, Sparkle, Sun, X } from "lucide-react";
+import { personal } from "@/data/personal";
 
 const links = [
   { label: "Sobre", href: "#sobre" },
   { label: "Projetos", href: "#projetos" },
-  { label: "Habilidades", href: "#habilidades" },
-  { label: "Trajetória", href: "#trajetoria" },
-  { label: "Interesses", href: "#interesses" },
+  { label: "Formação", href: "#formacao" },
+  { label: "Processo", href: "#processo" },
+  { label: "Contato", href: "#contato" },
 ];
 
 export function Navbar() {
@@ -60,7 +61,10 @@ export function Navbar() {
       <nav className="nav-shell" aria-label="Navegação principal">
         <a className="brand" href="#inicio" onClick={closeMenu}>
           <span className="brand-mark">JP.</span>
-          <span>Portfólio pessoal</span>
+          <span className="brand-text">
+            <strong>Desenvolvedor back-end</strong>
+            <small>Engenharia de Computação</small>
+          </span>
         </a>
         <button
           className="menu-toggle"
@@ -72,10 +76,7 @@ export function Navbar() {
         >
           {menuOpen ? <X size={21} /> : <Menu size={21} />}
         </button>
-        <div
-          className={`nav-content${menuOpen ? " is-open" : ""}`}
-          id="primary-navigation"
-        >
+        <div className={`nav-content${menuOpen ? " is-open" : ""}`} id="primary-navigation">
           <div className="nav-links">
             {links.map(({ label, href }) => (
               <a
@@ -88,9 +89,12 @@ export function Navbar() {
               </a>
             ))}
           </div>
-          <a className="nav-contact" href="#contato" onClick={closeMenu}>
-            Vamos conversar <ArrowUpRight size={15} aria-hidden="true" />
-          </a>
+          {personal.availability && (
+            <a className="nav-availability" href="#contato" onClick={closeMenu}>
+              {personal.availability}
+              <Sparkle size={13} aria-hidden="true" />
+            </a>
+          )}
           <button
             className="theme-toggle"
             type="button"
