@@ -15,12 +15,12 @@ const links = [
 export function Navbar() {
   const [activeSection, setActiveSection] = useState("sobre");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
+    // O tema escuro é o padrão; o claro só aparece se o visitante escolher.
     const savedTheme = localStorage.getItem("portfolio-theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const shouldUseDark = savedTheme ? savedTheme === "dark" : prefersDark;
+    const shouldUseDark = savedTheme !== "light";
 
     setDarkMode(shouldUseDark);
     document.documentElement.dataset.theme = shouldUseDark ? "dark" : "light";

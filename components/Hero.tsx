@@ -6,8 +6,8 @@ import { skillGroups } from "@/data/skills";
 const totalSkills = new Set(skillGroups.flatMap((group) => group.skills)).size;
 
 const stats = [
-  { value: String(projects.length).padStart(2, "0"), label: "Projetos desenvolvidos" },
-  { value: String(totalSkills), label: "Tecnologias e ferramentas" },
+  { value: `${projects.length}+`, label: "Projetos desenvolvidos" },
+  { value: `${totalSkills}+`, label: "Tecnologias e ferramentas" },
   { value: "4º", label: "Período de Engenharia" },
 ];
 
